@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -28,6 +29,17 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             IS_DEV: IS_DEV
+        }),
+
+        new MiniCssExtractPlugin({
+            filename: "style.css"
+        }),
+
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "[name].css",
+            chunkFilename: "[id].css"
         }),
 
         new HtmlWebpackPlugin({
@@ -77,7 +89,7 @@ module.exports = {
             {
                 test: /\.scss/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
                         options: {
@@ -93,6 +105,7 @@ module.exports = {
                     }
                 ]
             },
+
 
             // IMAGES
             {
