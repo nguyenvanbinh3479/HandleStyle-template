@@ -32,7 +32,7 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-            filename: "style.css"
+            filename: path.join('assets', 'styles', 'styles.css')
         }),
 
         new MiniCssExtractPlugin({
@@ -67,10 +67,12 @@ module.exports = {
             // HTML
 
             {
-                test: /\.html$/,
-                use: [ "ejs-loader" ]
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader?interpolate=require'
+                }
             },
-
+            
             // STYLES
             {
                 test: /\.css$/,
