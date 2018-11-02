@@ -36,11 +36,6 @@ module.exports = {
         }),
 
         // new HtmlWebpackPlugin({
-        //     template: './src/views/index.ejs',
-        //     title: appHtmlTitle
-        // }),
-
-        // new HtmlWebpackPlugin({
         //     template: path.join(__dirname, 'index.ejs'),
         //     title: appHtmlTitle
         // }),
@@ -55,6 +50,13 @@ module.exports = {
                 options: {
                     compact: true
                 }
+            },
+
+            // HTML
+
+            {
+                test: /\.html$/,
+                use: [ "ejs-loader" ]
             },
 
             // STYLES
