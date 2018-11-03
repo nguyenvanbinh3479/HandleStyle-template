@@ -1,0 +1,39 @@
+.form-control-borderless {
+  border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.jumbotron {
+
+  background: #353535;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+
+  &__title {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+
+  input{
+    padding: 10px 10px;
+    border-radius: 7px 0px 0px 7px;
+  }
+
+  .card-body {
+    padding: .5rem;
+  }
+
+  .btn {
+    color: #222;
+    padding: 11px 19px;
+    border-radius: 0px 7px 7px 0px;
+    background: #fff;
+    border: none;
+  }
+}
