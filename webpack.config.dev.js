@@ -13,7 +13,14 @@ module.exports = merge(webpackConfig, {
 
     devServer: {
         host: 'localhost',
-        open: true
+        open: true,
+        historyApiFallback: true,
+        historyApiFallback: {
+          rewrites: [
+              { from: /^\/$/, to: '/views/index.ejs' },
+              { from: /^\/page-item/, to: '/views/page-item.ejs' },
+          ],
+      },
     }
 
 });
