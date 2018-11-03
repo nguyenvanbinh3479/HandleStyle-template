@@ -42,12 +42,14 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: path.join('src', 'views', 'index.ejs'),
-            filename: 'index.html'
+            filename: 'index.html',
+            hash: true,
         }),
 
         new HtmlWebpackPlugin({
           template: path.join('src', 'views', 'page-item.ejs'),
-          filename: 'page-item.html'
+          filename: 'page-item.html',
+          hash: true,
         }),
 
         // new HtmlWebpackPlugin({
