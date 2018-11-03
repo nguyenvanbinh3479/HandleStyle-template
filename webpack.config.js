@@ -10,8 +10,6 @@ const dirNode = 'node_modules';
 const dirApp = path.join('src', 'app');
 const dirAssets = path.join('src', 'assets');
 
-const appHtmlTitle = 'HandleStyle';
-
 /**
  * Webpack Configuration
  */
@@ -44,7 +42,12 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: path.join('src', 'views', 'index.ejs'),
-            title: appHtmlTitle
+            filename: 'index.html'
+        }),
+
+        new HtmlWebpackPlugin({
+          template: path.join('src', 'views', 'page-item.ejs'),
+          filename: 'page-item.html'
         }),
 
         // new HtmlWebpackPlugin({
@@ -72,7 +75,7 @@ module.exports = {
                     loader: 'html-loader?interpolate=require'
                 }
             },
-            
+
             // STYLES
             {
                 test: /\.css$/,
