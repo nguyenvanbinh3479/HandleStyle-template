@@ -1,0 +1,43 @@
+.navbar-dark {
+
+  background: $black;
+
+  .navbar-brand {
+    color: $navbar-dark-active-color;
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav {
+
+    height: 31px;
+    margin-left: 160px;
+
+    .nav-item {
+      margin: 0 22px;
+    }
+
+    .nav-link {
+      color: $navbar-dark-color;
+      font-family: 'Roboto', sans-serif;
+
+      @include hover-focus {
+        color: $blue;
+        transition: .3s all;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+      border-bottom: 5px solid $white;
+
+      &:hover {
+        color: $blue;
+        border-bottom: 5px solid $blue;
+        transition: .3s all;
+      }
+    }
+  }
+}
