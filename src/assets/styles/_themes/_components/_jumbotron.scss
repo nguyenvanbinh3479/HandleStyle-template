@@ -10,6 +10,15 @@
 
 .jumbotron {
 
+  background: #353535;
+  border: 0;
+  border-radius: 0;
+
+  &__title {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+
   input{
     padding: 10px 10px;
     border-radius: 7px 0px 0px 7px;
