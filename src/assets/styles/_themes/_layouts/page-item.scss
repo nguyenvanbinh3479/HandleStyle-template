@@ -1,0 +1,122 @@
+
+.page-item {
+
+  &__left {
+    padding-top: 3.75rem;
+    overflow: hidden;
+  }
+
+  &__img-view {
+    margin: 0 0 3.125rem 0;
+
+    @include hover-focus {
+      opacity: .8;
+    }
+  }
+
+  &__content {
+    @extend .text-justify;
+  }
+
+  &__right {
+    background: $white;
+    padding-top: 3.75rem;
+    overflow: hidden;
+    position: relative;
+
+    .position-fixed {
+      width: 255px;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+
+    a {
+      color: $black;
+
+      @include hover-focus {
+        color: $blue;
+        transition: .3s all;
+      }
+    }
+  }
+
+  &__published {
+    color: #a4a4a4;
+    font-size: 0.875rem;
+  }
+
+  &__stats {
+
+    @extend .list-unstyled;
+    @extend .d-inline-flex;
+
+    border-bottom: 1px solid #d7d7d7;
+    padding: 0 0 20px 0;
+    width: 100%;
+
+    &_item {
+      margin-right: 15px;
+      font-size: 0.875rem;
+
+      i {
+        color: #a4a4a4;
+      }
+    }
+  }
+}
+
+.profile {
+
+  @extend .d-flex;
+  border-bottom: 1px solid #d7d7d7;
+  padding-bottom: 40px;
+  margin: 20px 0;
+
+  &__name {
+    @extend .d-block;
+    color: $black;
+
+    @include hover-focus {
+      color: $blue;
+      transition: .3s all;
+    }
+  }
+
+  &__avatar {
+    margin: 0 0 0 auto;
+
+    img {
+      border: 1px solid $blue;
+      @extend .rounded-circle;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__view {
+    font-size: 0.6875rem;
+    padding: 5px 15px;
+    margin: 10px 0 0;
+    border-radius: 20px;
+  }
+}
+
+.install-style {
+  @extend .text-center;
+}
+
+.btn-install-style {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  border-radius: 40px;
+
+  i {
+    margin-right: 20px;
+  }
+}
+
+.sticky-offset {
+  top: 80px;
+}
