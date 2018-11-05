@@ -125,7 +125,6 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             sourceMap: IS_DEV,
-                            includePaths: [dirAssets]
                         }
                     }
                 ]
@@ -135,10 +134,18 @@ module.exports = {
             // IMAGES
             {
                 test: /\.(jpe?g|png|gif)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]'
-                }
+                use: [
+                  {
+                      loader: 'file-loader',
+                      options: {
+                          name: '[path][name].[ext]',
+                          context: path.resolve(__dirname, "src/"),
+                          outputPath: 'dist/',
+                          publicPath: '../../',
+                          useRelativePaths: true
+                      }
+                  }
+              ],
             }
         ]
     }
