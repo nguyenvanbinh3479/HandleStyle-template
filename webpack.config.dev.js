@@ -12,9 +12,9 @@ module.exports = merge(webpackConfig, {
     },
 
     devServer: {
+        contentBase: path.join(__dirname, 'dist'),
         host: 'localhost',
         open: true,
-        historyApiFallback: true,
         historyApiFallback: {
           rewrites: [
               { from: /^\/$/, to: '/views/index.ejs' },
