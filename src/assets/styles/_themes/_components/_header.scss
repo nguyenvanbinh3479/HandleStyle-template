@@ -12,8 +12,17 @@
     height: 29px;
     margin-left: 160px;
 
+    @include media-breakpoint-down(md) {
+      height: inherit;
+      margin-left: 0;
+    }
+
     .nav-item {
       margin: 0 22px;
+
+      @include media-breakpoint-down(md) {
+        margin: 0;
+      }
     }
 
     .nav-link {
@@ -41,3 +50,29 @@
     }
   }
 }
+
+// @media only screen and (max-width: 767px) {
+//   #navbarNav {
+//     position: fixed;
+//     top: 0;
+//     left: 15px;
+//     z-index: 99;
+//     width: 280px;
+//     height: 100%;
+//     background-color: #ddd;
+//     overflow: auto;
+//   }
+//   .menu-overlay {
+//     display: none;
+//     background-color: #000;
+//     bottom: 0;
+//     left: 0;
+//     opacity: 0.5;
+//     filter: alpha(opacity=50);
+//     /* IE7 & 8 */
+//     position: fixed;
+//     right: 0;
+//     top: 0;
+//     z-index: 49;
+//   }
+// }
