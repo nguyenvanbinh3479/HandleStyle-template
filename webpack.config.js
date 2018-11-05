@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -15,7 +16,11 @@ const dirAssets = path.join('src', 'assets');
  */
 module.exports = {
     entry: {
-        bundle: './src/app/index.js'
+        bundle: './src/app/index.js',
+    },
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: '/assets/'
     },
     resolve: {
         modules: [
@@ -28,6 +33,8 @@ module.exports = {
         new webpack.DefinePlugin({
             IS_DEV: IS_DEV
         }),
+
+        new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ]),
 
         new MiniCssExtractPlugin({
             filename: path.join('assets', 'styles', 'styles.css')
