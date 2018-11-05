@@ -58,6 +58,11 @@ module.exports = {
           hash: true,
         }),
 
+        new HtmlWebpackPlugin({
+          template: path.join('src', 'views', 'register.ejs'),
+          filename: 'register.html',
+          hash: true,
+        }),
         // new HtmlWebpackPlugin({
         //     template: path.join(__dirname, 'index.ejs'),
         //     title: appHtmlTitle
