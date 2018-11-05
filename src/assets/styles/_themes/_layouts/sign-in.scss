@@ -15,6 +15,13 @@ body.signin {
     font-size: 1.5rem;
   }
 
+  .card-img-left {
+    width: 45%;
+    /* Link to your background image using in the property below! */
+    background: scroll center url('https://source.unsplash.com/WEQbe2jBg40/414x512');
+    background-size: cover;
+  }
+
   .card-body {
     padding: 2rem;
   }
