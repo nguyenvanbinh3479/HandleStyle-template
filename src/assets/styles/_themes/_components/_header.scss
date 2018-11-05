@@ -10,7 +10,7 @@
   .navbar-nav {
 
     height: 29px;
-    margin-left: 160px;
+    // margin-left: 160px;
 
     @include media-breakpoint-down(md) {
       height: inherit;
