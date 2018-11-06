@@ -1,0 +1,21 @@
+.card-title {
+
+  a {
+    color: $black;
+  }
+}
+
+.card-img-top {
+  @include hover-focus {
+    opacity: .8;
+    @include transition(all, .3s);
+  }
+}
+
+.card-footer {
+
+  .card-link {
+    color: $black;
+    font-size: 0.875rem;
+  }
+}
