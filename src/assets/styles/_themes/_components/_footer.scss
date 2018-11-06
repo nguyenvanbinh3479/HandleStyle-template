@@ -36,4 +36,9 @@
       padding-left: 0;
     }
   }
+
+  &__copyright {
+    @extend .text-white-50;
+    font-size: 0.875rem;
+  }
 }
