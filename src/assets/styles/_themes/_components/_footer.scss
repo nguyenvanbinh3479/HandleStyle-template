@@ -3,11 +3,11 @@
   background: #222;
   color: #fff;
   .container{
-    margin: 15px 112px;
-    &__logo {
-      font-size: 38px;
-      margin: 17px 12px 50px;
-    }
+    margin: 20px auto;
+  }
+  &__logo {
+    font-size: 40px;
+    margin: 8px 0px 40px;
   }
 }
 
@@ -15,14 +15,18 @@
   padding-bottom: 25px;
 
   .develop {
-    // margin: 0px 183px 0px 12px;
+    padding: 0;
+  }
+  .help {
+    padding: 0;
   }
   h5 {
     font-weight: bold;
     font-size: 17px;
+    margin-bottom: 20px;
   }
   p {
-    color: rgb(179, 179, 179);
+    color: #b3b3b3;
     font-size: 12px;
   }
 }
@@ -40,13 +44,21 @@
         margin: 20px 0px;
         li{
           display: inline-block;
-          margin-right: 20px;
+          margin-right: 55px;
           a{
             text-decoration: none;
             font-weight: bold;
             font-size: 15px;
+            color: #fff;
           }
         }
+        .last{
+          margin: 0;
+        }
+      }
+      p{
+        color: #b3b3b3;
+        margin: 0;
       }
     }
   }

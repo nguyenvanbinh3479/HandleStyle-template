@@ -1,0 +1,48 @@
+
+main{
+  overflow: hidden;
+  .container-fluit{
+    background: #f9f9f9;
+    overflow: hidden;
+    padding-bottom: 51px;
+    .row{
+      overflow: hidden;
+      margin: 63px auto;
+      max-width: 81%;
+      .card{
+        max-width: 23.6%;
+        float: left;
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 0 0 20px 0;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &:hover{
+          box-shadow: 10px 10px 5px #aaaaaa;
+        }
+        a{
+          color: #000;
+          text-decoration: none;
+        }
+        img{
+          max-width: 100%;
+        }
+        .title{
+          padding: 10px;
+          p{
+            margin: 0;
+          }
+        }
+        .icon{
+          border-top: 1px solid rgb(139, 139, 139);
+          padding: 10px 0px;
+          margin: 0px 10px;
+        }
+      }
+      #last{
+        margin: 0 0 20px 0 ;
+      }
+    }
+  }
+}
+
