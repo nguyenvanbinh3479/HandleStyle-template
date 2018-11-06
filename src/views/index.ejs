@@ -8,7 +8,27 @@
 
     <%= require('html-loader!./components/_nav_menu.ejs') %>
 
-    <%= require('html-loader!./components/_main.ejs') %>
+    <div class="container">
+      <div class="row">
+        <% for(var i=0; i < 10 ; i++) { %>
+          <div class="col-md-4 mt-4">
+            <div class="card">
+              <a href="/page-item.html">
+                <img class="card-img-top" src="assets/images/page-item/page_item_detail.jpg" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title"><a href="/page-item.html">Facebook Clean Dark Powerful premium plugins</a></h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link"><i class="fas fa-heart"></i> 347</a>
+                <a href="#" class="card-link"><i class="fas fa-eye"></i> 1219</a>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
 
     <%= require('html-loader!./components/_footer.ejs') %>
 </body>

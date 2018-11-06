@@ -1,84 +1,44 @@
-.footer{
-  overflow: hidden;
-  background: #222;
-  color: #fff;
-  .container{
-    margin: 20px auto;
+.footer {
+
+  background: $black;
+  padding: 45px 0 20px;
+  color: $white;
+
+  a {
+    color: $white;
   }
+
   &__logo {
-    font-size: 40px;
-    margin: 8px 0px 40px;
+    font-size: 36px;
   }
-}
 
-.footer_top {
-  padding-bottom: 25px;
+  &__top {
 
-  .develop {
-    padding: 0;
-  }
-  .help {
-    padding: 0;
-  }
-  h5 {
-    font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 20px;
-  }
-  p {
-    color: #b3b3b3;
-    font-size: 12px;
-  }
-}
+    margin-top: 60px;
 
-.footer_bottom{
-  border-top: 1px solid rgb(128, 128, 128);
-  overflow: hidden;
-  .footer_left{
-    float: left;
-    padding: 0;
-    .menu_footer{
-      ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 20px 0px;
-        li{
-          display: inline-block;
-          margin-right: 55px;
-          a{
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
-            color: #fff;
-          }
-        }
-        .last{
-          margin: 0;
-        }
-      }
-      p{
-        color: #b3b3b3;
-        margin: 0;
-      }
+    h5 {
+      @extend .text-uppercase;
+    }
+
+    a {
+      @extend .text-white-50;
+      font-size: 0.875rem;
     }
   }
-  .footer_right{
-    float: right;
-    margin-top: 30px;
-    padding: 0;
-    ul{
-      list-style-type: none;
-      li{
-        display: inline-block;
-        float: right;
-        padding: 0px 10px;
-        a{
-          text-decoration: none;
-          img{
-            border-radius: 2px;
-          }
-        }
-      }
+
+  &__bottom {
+
+    @extend .d-flex;
+  }
+
+  .bottom-link {
+    li.nav-item:first-child a {
+      padding-left: 0;
     }
+  }
+
+  &__copyright {
+    @extend .text-white-50;
+    font-size: 0.875rem;
   }
 }
