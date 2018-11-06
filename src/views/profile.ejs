@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <%= require('html-loader!./partials/head.ejs') %>
+  <body>
+    <%= require('html-loader!./components/_header.ejs') %>
+
+    <%= require('html-loader!./components/_nav_menu.ejs') %>
+
+    <!-- PAGE-ITEM -->
+    <section class="page-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 page-item__left">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-project-tab" data-toggle="pill" href="#pills-project" role="tab" aria-controls="pills-project" aria-selected="true">Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-project" role="tabpanel" aria-labelledby="pills-project-tab">
+                  <div class="row">
+                    <% for(var i=0; i < 9 ; i++) { %>
+                      <div class="col-md-4">
+                        <div class="card mb-4">
+                          <img class="card-img-top" src="assets/images/page-item/page_item_detail.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title <%= [i] %></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>
+                    <% } %>
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                  <% for(var i=0; i < 3 ; i++) { %>
+                    <div class="col-md-4">
+                      <div class="card">
+                        <img class="card-img-top" src="assets/images/page-item/page_item_detail.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 page-item__right fade-in">
+            <div class="profile">
+              <div class="profile__detail d-flex flex-column">
+                <div class="profile__avatar mx-auto fade-in one">
+                  <a href="/profile.html"><img src="assets/images/avatar.jpeg" alt=""></a>
+                </div>
+                <div class="profile__name mx-auto fade-in two">
+                  <a href="/profile.html">hoangbaovu</a>
+                </div>
+              </div>
+              <!-- /.profile-detail -->
+            </div>
+            <!-- /.profile -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -6,11 +6,15 @@
 
 @import '_bootstrap/bootstrap';
 
-// Themes
+// Components
 
 @import '_themes/_components/_header';
 @import '_themes/_components/_jumbotron';
 @import '_themes/_components/_nav_menu';
+
+// Themes
+
 @import '_themes/_layouts/index';
 @import '_themes/_layouts/page-item';
 @import '_themes/_layouts/sign-in';
+@import '_themes/_layouts/profile';
