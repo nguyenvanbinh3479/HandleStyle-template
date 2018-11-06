@@ -2,3 +2,10 @@ body {
     background: #f9f9f9;
     font-family: 'Roboto', sans-serif;
 }
+
+a {
+  @include hover-focus {
+    color: $primary;
+    @include transition(all, .3s);
+  }
+}
